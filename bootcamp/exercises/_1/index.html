@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 1</title>
+      <style>
+        .disabled {
+          background-color: rgb(167, 165, 165);
+        }
+        .enabled {
+          background-color: rgb(26, 11, 240);
+          color: white;
+        }
+      </style>
+   </head>
+   <body>
+
+      <h1>Block 1 - element creation without events</h1>
+      <div id='block1'>
+      </div>
+
+      <h1>Block 2 - event listener affecting the entire document</h1>
+      <button class="red">Turn red</button>
+
+      <h1>Block 3 - event listener and side effects</h1>
+      Click on each link to load the image in here
+      <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/image-missing-1178918.png" alt="something to show">
+      <ul>
+         <li>https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500</li>
+         <li>https://images.pexels.com/photos/370717/pexels-photo-370717.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500</li>
+         <li>https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500</li>
+      </ul>
+      
+      <h1>Block 4 - event listeners</h1>
+      <input type="text">
+      <button> Copy to paragraph 4.1</button>
+      <h4>the paragraph 4.1</h4>
+      <p id= "block4.1"></p>
+      <h4>the paragraph 4.2 is a mirror of your input</h4>
+      <p id= "block4.2"></p>
+
+      <h1>Block 5 - Auto validation (over 20 chars will turn red)</h1>
+      <textarea id="textArea" cols="30" rows="10"></textarea>
+
+      <h1>Block 6 - Manual validation</h1>
+      <label for="evenNumberInput">Type an odd number</label>
+      <input type="text" id="evenNumberInput">
+      <button>Validate</button>
+
+      <h1>Block 7 - fill list on load</h1>
+      <ul id = "listToFill"></ul>
+
+      <h1>Block 8 - change element behavior</h1>
+      <a id='googleLink' href="https://google.com">
+        Click this link will point your browser to google
+      </a>
+      <button id = "newTab">
+        This will change the link behavior to open Google in a separate tab
+      </button>
+
+      <h1>Block 9 - dropdown changes</h1>
+      <p id="colorsParagraph">Lorem ipsum, dolor sit amet</p>
+      <select name="colors" id="colorsSelect">
+         <option value="red">red</option>
+         <option value="green">green</option>
+         <option value="blue">blue</option>
+         <option value="yellow">yellow</option>
+         <option value="blue">blue</option>
+      </select>
+
+      <h1>Block 10 - random and track</h1>
+      <p>random: <span id = "currentRandom"></span></p>
+      <p>total numbers generated: <span id = "totalNumbers">0</span></p>
+      <p>even: <span id = "oddNumbers"></span></p>
+      <p>odd: <span id = "evenNumbers"></span></p>
+      <button id = "randomButton">Generate random number</button>
+
+      <h1>Block 11 - list validation</h1>
+      <ul id="ul-11"></ul>
+      <input type="text" id="input-11">
+      <button id="button-11">Botón 6</button>;
+
+      <h1>Block 12</h1>
+      <button id = "btn12" class="enabled">Toggle disabled</button>
+
+      <script src="./main.js"></script>
+   </body>
+</html>
