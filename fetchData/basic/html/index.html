@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Fetch (public) repository commits from github</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="container">
+        <h2>Fetch a repo</h2>
+        <div class="form-group">
+          <label for="urlInput">repo URL</label>
+          <input type="text" class="form-control" id="urlInput">
+        </div>
+        <button type="button" id="fetchCommits" class="btn btn-primary">Fetch</button>
+        <h2 class="mt-4 mb-3">Commits</h1>
+         <table class="table">
+            <thead class="thead-dark">
+               <tr>
+                  <th scope="col">sha</th>
+                  <th scope="col">date</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">email</th>
+                  <th scope="col">message</th>
+               </tr>
+            </thead>
+            <tbody id="books-body">
+            </tbody>
+         </table>
+      </div>
+      <script src="main.js"></script>
+   </body>
+</html>
