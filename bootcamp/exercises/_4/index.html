@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exercise 4</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="mt-4 mb-3">Books</h1>
+         <table class="table">
+            <thead class="thead-dark">
+               <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Sales</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Remove</th>
+               </tr>
+            </thead>
+            <tbody id="books-body">
+            </tbody>
+         </table>
+         <h2>Add a new book</h2>
+         <form>
+            <div class="form-group">
+               <label for="titleInput">Title</label>
+               <input type="text" class="form-control" id="titleInput">
+            </div>
+            <div class="row">
+               <div class="form-group col">
+                  <label for="authorInput">Author</label>
+                  <input type="text" class="form-control" id="authorInput">
+               </div>
+               <div class="form-group col">
+                  <label for="salesInput">Sales</label>
+                  <input type="number" class="form-control" id="salesInput">
+               </div>
+               <div class="form-group col">
+                  <label for="priceInput">Price</label>
+                  <input type="number" class="form-control" id="priceInput">
+               </div>
+            </div>
+            <button type="submit" id="addBookButton" class="btn btn-primary">Save</button>
+         </form>
+      </div>
+      <script src="main.js"></script>
+   </body>
+</html>
