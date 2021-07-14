@@ -138,19 +138,35 @@ colorsSelect.addEventListener("change", e => {
 
 // Addenda 2
 // add a random color option
-
 /////////////////////////////////////////////////////
 // Block 10 - random and track
 // add a click listener to 'click' event on 'randomButton'
 // it has to generate a random number between 1 and 100
 // it has to keep track of total generated numbers and show how many
 // of them are odd and even.
+
+// Return a random number between min and max
+const getRandomNumber = (min,max) => Math.floor((Math.random() * max) + min);
+const hexadecimal = "0123456789ABCDEF"
+
+const getRandomColorHex = () => { // #RRGGBB
+  let ret = "#";
+  // get a random hexChar -> 6 times
+  for(let i = 0; i < 6; i = i + 1) {
+    const randomPosition = getRandomNumber(0,15);
+    const myHexChar = hexadecimal[randomPosition];
+    ret = ret + myHexChar;
+  }
+  return ret;
+}
+
 const currentRandom = document.getElementById("currentRandom");
 const totalNumbers = document.getElementById("totalNumbers");
 const oddNumbers = document.getElementById("oddNumbers");
 const evenNumbers = document.getElementById("evenNumbers");
 const randomButton = document.getElementById("randomButton");
-randomButton.onclick = () => {
+
+const callback2 = () => {
   const randomNumber = Math.floor(Math.random() * 100);
   currentRandom.textContent = randomNumber;
   totalNumbers.textContent++;
@@ -161,6 +177,33 @@ randomButton.onclick = () => {
     evenNumbers.textContent++;    
   }
 };
+let generatedNumbersCounter = 0;
+let odds = 0;
+let evens = 0;
+const callback = () => { 
+  const randomNumber = getRandomNumber(1,100); // 37
+  console.log("callbaaaaack", randomNumber);
+  generatedNumbersCounter = generatedNumbersCounter + 1;
+  const isOdd = (randomNumber % 2 !== 0);
+  if (isOdd) {
+    odds++;
+  } else {
+    evens++;
+  }
+  const oddPercentage = odds / generatedNumbersCounter * 100;
+  const evenPercentage = evens / generatedNumbersCounter * 100;
+  // check
+  console.log("isOdd", isOdd)
+  console.log("odds", odds, "evens", evens);
+  console.log("oddPercentage", oddPercentage, "evenPercentage", evenPercentage);
+
+  // html show data
+  oddNumbers.textContent = odds;
+  evenNumbers.textContent = evens;
+  currentRandom.textContent = randomNumber;
+  totalNumbers.textContent = generatedNumbersCounter;
+}
+randomButton.addEventListener('click', callback);
 
 // Addenda: show the percentage of even and odd numbers 
 // regarding the total of numbers generated
