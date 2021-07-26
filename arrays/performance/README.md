@@ -83,7 +83,7 @@ To make a test with a specific amount of domains you can type
 ```sh
 node .\arrays\performance\test.js 2
 ```
-where 2 is the number of domains
+where 2 is the number of domains. You can try with some interesting numbers :) 
 
 If you don't type a number and just run the program, it will make some tests for 10, 1000, 10000 and 20000 domains to compare the results. It may take a while, depending on your computer :)
 
@@ -105,11 +105,14 @@ Call to getBlockPolicyState took 53915.028999984264 milliseconds.
 { oneDomain: true, allDomains: false }
 Call to getBlockPolicyStateImproved took 5.466399967670441 milliseconds.
 { oneDomain: true, allDomains: false }
+Testing for 20000 domains
 Call to getBlockPolicyState took 478649.5911999941 milliseconds.
 { oneDomain: true, allDomains: false }
 Call to getBlockPolicyStateImproved took 21.84560000896454 milliseconds.
 ```
 looking at how the numbers increases between tests, you can get a clear idea about how important is to write the right code for the right things
+
+And here is an [online workbench](https://jsben.ch/ww7BN)
 
 ![Results](/screenshots/array_performance.png?raw=true "Performance changes when code is not optimized")
 
